@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>About | Bits of Embedded</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #0b0f14;
+            color: #e6edf3;
+            min-height: 100vh;
+        }
+
+        header {
+            width: 100%;
+            height: 90px;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            padding: 0 60px;
+
+            border-bottom: 1px solid #252b33;
+        }
+
+        .logo img {
+            height: 50px;
+            width: auto;
+            display: block;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+            gap: 35px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #9da7b2;
+            font-size: 16px;
+            font-weight: 500;
+        }
+
+        nav a:hover {
+            color: #ffffff;
+        }
+
+        nav a.active {
+            color: #ffffff;
+            font-weight: 600;
+        }
+
+        .page {
+            padding: 80px 60px;
+            max-width: 900px;
+            margin: auto;
+        }
+
+        .page h1 {
+            font-size: 52px;
+            margin-bottom: 30px;
+        }
+
+        .page h2 {
+            font-size: 28px;
+            margin-top: 45px;
+            margin-bottom: 15px;
+        }
+
+        .page p {
+            color: #9da7b2;
+            font-size: 18px;
+            line-height: 1.8;
+        }
+
+        @media (max-width: 768px) {
+
+            header {
+                height: auto;
+                padding: 25px;
+                flex-direction: column;
+                gap: 25px;
+            }
+
+            nav {
+                gap: 20px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .page {
+                padding: 50px 25px;
+            }
+
+            .page h1 {
+                font-size: 42px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<header>
+
+    <div class="logo">
+
+        <img
+            src="logo.png"
+            alt="Bits of Embedded Logo"
+        >
+
+    </div>
+
+
+    <nav>
+
+        <a href="index.html">
+            Home
+        </a>
+
+        <a href="projects.html">
+            Projects
+        </a>
+
+        <a href="tutorials.html">
+            Tutorials
+        </a>
+
+        <a href="about.html" class="active">
+            About
+        </a>
+
+    </nav>
+
+</header>
+
+
+
+<main class="page">
+
+
+    <h1>
+        About Bits of Embedded
+    </h1>
+
+
+    <p>
+
+        Bits of Embedded is a technical learning and
+        project platform focused on understanding,
+        building and experimenting with embedded
+        systems and digital engineering.
+
+    </p>
+
+
+    <h2>
+        What you will find here
+    </h2>
+
+
+    <p>
+
+        Step-by-step tutorials, engineering projects,
+        experiments, implementation notes, source code
+        and practical explanations.
+
+    </p>
+
+
+    <h2>
+        Topics
+    </h2>
+
+
+    <p>
+
+        Embedded Systems • FPGA • DSP • C/C++ •
+        Sensor Fusion • AI/ML • Digital Systems
+
+    </p>
+
+
+    <h2>
+        Goal
+    </h2>
+
+
+    <p>
+
+        Learn the fundamentals, build practical
+        implementations and document the complete
+        process from concept to working system.
+
+    </p>
+
+
+</main>
+
+
+</body>
+
+</html>

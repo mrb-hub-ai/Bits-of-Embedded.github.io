@@ -3,21 +3,13 @@
 
 <head>
 
-    <!-- Basic page information -->
     <meta charset="UTF-8">
 
-    <!-- Makes the website responsive on phones/tablets -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Browser tab title -->
-    <title>Bits of Embedded</title>
-
+    <title>Projects | Bits of Embedded</title>
 
     <style>
-
-        /* =========================================
-           RESET
-           ========================================= */
 
         * {
             margin: 0;
@@ -25,317 +17,134 @@
             box-sizing: border-box;
         }
 
-
-        /* =========================================
-           BODY
-           ========================================= */
-
         body {
-
             font-family: Arial, Helvetica, sans-serif;
-
             background-color: #0b0f14;
-
             color: #e6edf3;
-
             min-height: 100vh;
         }
 
-
-        /* =========================================
-           HEADER
-           ========================================= */
-
         header {
-
             width: 100%;
-
             height: 90px;
 
             display: flex;
-
             align-items: center;
-
             justify-content: space-between;
 
             padding: 0 60px;
 
-            background-color: #0b0f14;
-
             border-bottom: 1px solid #252b33;
         }
 
-
-        /* =========================================
-           LOGO
-           ========================================= */
-
-        .logo {
-
-            display: flex;
-
-            align-items: center;
-        }
-
-
         .logo img {
-
             height: 50px;
-
             width: auto;
-
             display: block;
         }
 
-
-        /* =========================================
-           NAVIGATION
-           ========================================= */
-
         nav {
-
             display: flex;
-
             align-items: center;
-
             gap: 35px;
         }
 
-
         nav a {
-
             text-decoration: none;
-
             color: #9da7b2;
-
             font-size: 16px;
-
             font-weight: 500;
-
-            transition: color 0.2s ease;
         }
-
-
-        /* Navigation hover */
 
         nav a:hover {
-
             color: #ffffff;
         }
 
-
-        /* Current page */
-
         nav a.active {
-
             color: #ffffff;
-
             font-weight: 600;
         }
 
-
-        /* =========================================
-           HOME SECTION
-           ========================================= */
-
-        .home {
-
-            min-height: calc(100vh - 90px);
-
-            display: flex;
-
-            align-items: center;
-
+        .page {
             padding: 80px 60px;
+            max-width: 1200px;
+            margin: auto;
         }
 
-
-        /* =========================================
-           HOME CONTENT
-           ========================================= */
-
-        .home-content {
-
-            max-width: 900px;
-        }
-
-
-        /* =========================================
-           SMALL INTRO TEXT
-           ========================================= */
-
-        .welcome {
-
-            font-size: 15px;
-
-            letter-spacing: 2px;
-
-            text-transform: uppercase;
-
-            color: #7d8996;
-
+        .page h1 {
+            font-size: 52px;
             margin-bottom: 20px;
-        }
-
-
-        /* =========================================
-           MAIN TITLE
-           ========================================= */
-
-        .home h1 {
-
-            font-size: 64px;
-
-            line-height: 1.1;
-
             color: #ffffff;
-
-            margin-bottom: 25px;
         }
 
-
-        /* =========================================
-           DESCRIPTION
-           ========================================= */
-
-        .home-description {
-
-            max-width: 720px;
-
-            font-size: 20px;
-
-            line-height: 1.7;
-
+        .page-intro {
             color: #9da7b2;
-
-            margin-bottom: 40px;
+            font-size: 19px;
+            line-height: 1.7;
+            max-width: 750px;
+            margin-bottom: 50px;
         }
 
-
-        /* =========================================
-           TOPIC SECTION
-           ========================================= */
-
-        .topics {
-
-            display: flex;
-
-            flex-wrap: wrap;
-
-            gap: 12px;
+        .projects {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
         }
 
-
-        /* =========================================
-           TOPIC CARDS
-           ========================================= */
-
-        .topic {
-
-            padding: 12px 18px;
-
-            border: 1px solid #303944;
-
-            border-radius: 6px;
+        .project {
+            padding: 30px;
 
             background-color: #11161d;
 
-            color: #c9d1d9;
+            border: 1px solid #303944;
 
-            font-size: 15px;
+            border-radius: 8px;
 
-            transition:
-                border-color 0.2s ease,
-                background-color 0.2s ease;
+            transition: 0.2s;
         }
 
-
-        /* Topic hover */
-
-        .topic:hover {
-
+        .project:hover {
             border-color: #596575;
-
-            background-color: #161d26;
+            transform: translateY(-3px);
         }
 
+        .project h2 {
+            font-size: 22px;
+            margin-bottom: 15px;
+        }
 
-        /* =========================================
-           MOBILE / TABLET
-           ========================================= */
+        .project p {
+            color: #9da7b2;
+            line-height: 1.6;
+        }
 
-        @media (max-width: 768px) {
-
-
-            /* Header */
+        @media (max-width: 800px) {
 
             header {
-
                 height: auto;
-
                 padding: 25px;
-
                 flex-direction: column;
-
                 gap: 25px;
             }
 
-
-            /* Logo */
-
-            .logo img {
-
-                height: 45px;
-            }
-
-
-            /* Navigation */
-
             nav {
-
                 gap: 20px;
-
                 flex-wrap: wrap;
-
                 justify-content: center;
             }
 
-
-            nav a {
-
-                font-size: 15px;
+            .page {
+                padding: 50px 25px;
             }
 
-
-            /* Home */
-
-            .home {
-
-                min-height: calc(100vh - 150px);
-
-                padding: 60px 25px;
-
-                align-items: flex-start;
+            .page h1 {
+                font-size: 42px;
             }
 
-
-            /* Main heading */
-
-            .home h1 {
-
-                font-size: 44px;
+            .projects {
+                grid-template-columns: 1fr;
             }
-
-
-            /* Description */
-
-            .home-description {
-
-                font-size: 17px;
-            }
-
         }
-
 
     </style>
 
@@ -345,169 +154,147 @@
 <body>
 
 
-    <!-- =========================================
-         HEADER
-         ========================================= -->
+<header>
 
-    <header>
+    <div class="logo">
 
+        <img
+            src="logo.png"
+            alt="Bits of Embedded Logo"
+        >
 
-        <!-- =====================================
-             LOGO
-             ===================================== -->
-
-        <div class="logo">
-
-            <!--
-                logo.png is in the same folder
-                as index.html
-            -->
-
-            <img
-                src="logo.png"
-                alt="Bits of Embedded Logo"
-            >
-
-        </div>
+    </div>
 
 
+    <nav>
 
-        <!-- =====================================
-             NAVIGATION
-             ===================================== -->
+        <a href="index.html">
+            Home
+        </a>
 
-        <nav>
+        <a href="projects.html" class="active">
+            Projects
+        </a>
 
-            <!-- Home -->
-            <a href="index.html" class="active">
-                Home
-            </a>
+        <a href="tutorials.html">
+            Tutorials
+        </a>
 
+        <a href="about.html">
+            About
+        </a>
 
-            <!-- Projects -->
-            <a href="projects.html">
-                Projects
-            </a>
+    </nav>
 
-
-            <!-- Tutorials -->
-            <a href="tutorials.html">
-                Tutorials
-            </a>
-
-
-            <!-- About -->
-            <a href="about.html">
-                About
-            </a>
-
-        </nav>
-
-
-    </header>
+</header>
 
 
 
-    <!-- =========================================
-         HOME PAGE
-         ========================================= -->
+<main class="page">
 
-    <main class="home">
+    <h1>
+        Projects
+    </h1>
 
+    <p class="page-intro">
 
-        <div class="home-content">
+        Engineering projects, experiments and practical
+        implementations covering embedded systems,
+        FPGA, DSP, sensor fusion and AI/ML.
 
-
-            <!-- Small introduction -->
-
-            <div class="welcome">
-
-                ENGINEERING • LEARNING • BUILDING
-
-            </div>
+    </p>
 
 
-
-            <!-- Main title -->
-
-            <h1>
-
-                Bits of Embedded
-
-            </h1>
+    <section class="projects">
 
 
+        <div class="project">
 
-            <!-- Description -->
+            <h2>
+                ZedBoard Projects
+            </h2>
 
-            <p class="home-description">
-
-                A collection of step-by-step tutorials,
-                engineering projects, experiments and
-                technical notes covering embedded systems,
-                FPGA, DSP, sensor fusion, C/C++ and
-                digital systems.
-
+            <p>
+                FPGA and embedded-system projects using
+                the ZedBoard platform.
             </p>
 
+        </div>
 
 
-            <!-- =====================================
-                 TOPICS
-                 ===================================== -->
+        <div class="project">
 
-            <div class="topics">
+            <h2>
+                Sensor Fusion
+            </h2>
 
-
-                <div class="topic">
-
-                    Embedded Systems
-
-                </div>
-
-
-                <div class="topic">
-
-                    FPGA
-
-                </div>
-
-
-                <div class="topic">
-
-                    DSP
-
-                </div>
-
-
-                <div class="topic">
-
-                    Sensor Fusion
-
-                </div>
-
-
-                <div class="topic">
-
-                    C / C++
-
-                </div>
-
-
-                <div class="topic">
-
-                    AI / ML
-
-                </div>
-
-
-            </div>
-
+            <p>
+                Practical sensor fusion experiments
+                including Kalman filtering.
+            </p>
 
         </div>
 
 
-    </main>
+        <div class="project">
+
+            <h2>
+                DSP Projects
+            </h2>
+
+            <p>
+                Digital signal processing experiments
+                and implementations.
+            </p>
+
+        </div>
+
+
+        <div class="project">
+
+            <h2>
+                Camera + FPGA
+            </h2>
+
+            <p>
+                Camera interfaces and real-time image
+                processing using FPGA.
+            </p>
+
+        </div>
+
+
+        <div class="project">
+
+            <h2>
+                AI / ML
+            </h2>
+
+            <p>
+                Embedded AI and machine-learning
+                experiments.
+            </p>
+
+        </div>
+
+
+        <div class="project">
+
+            <h2>
+                Embedded Systems
+            </h2>
+
+            <p>
+                Embedded software, hardware and
+                system-level experiments.
+            </p>
+
+        </div>
+
+
+    </section>
+
+</main>
 
 
 </body>

@@ -1,30 +1,514 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-    <title>My Engineering Website</title>
+
+    <!-- Basic page information -->
+    <meta charset="UTF-8">
+
+    <!-- Makes the website responsive on phones/tablets -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Browser tab title -->
+    <title>Bits of Embedded</title>
+
+
+    <style>
+
+        /* =========================================
+           RESET
+           ========================================= */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+
+        /* =========================================
+           BODY
+           ========================================= */
+
+        body {
+
+            font-family: Arial, Helvetica, sans-serif;
+
+            background-color: #0b0f14;
+
+            color: #e6edf3;
+
+            min-height: 100vh;
+        }
+
+
+        /* =========================================
+           HEADER
+           ========================================= */
+
+        header {
+
+            width: 100%;
+
+            height: 90px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: space-between;
+
+            padding: 0 60px;
+
+            background-color: #0b0f14;
+
+            border-bottom: 1px solid #252b33;
+        }
+
+
+        /* =========================================
+           LOGO
+           ========================================= */
+
+        .logo {
+
+            display: flex;
+
+            align-items: center;
+        }
+
+
+        .logo img {
+
+            height: 50px;
+
+            width: auto;
+
+            display: block;
+        }
+
+
+        /* =========================================
+           NAVIGATION
+           ========================================= */
+
+        nav {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 35px;
+        }
+
+
+        nav a {
+
+            text-decoration: none;
+
+            color: #9da7b2;
+
+            font-size: 16px;
+
+            font-weight: 500;
+
+            transition: color 0.2s ease;
+        }
+
+
+        /* Navigation hover */
+
+        nav a:hover {
+
+            color: #ffffff;
+        }
+
+
+        /* Current page */
+
+        nav a.active {
+
+            color: #ffffff;
+
+            font-weight: 600;
+        }
+
+
+        /* =========================================
+           HOME SECTION
+           ========================================= */
+
+        .home {
+
+            min-height: calc(100vh - 90px);
+
+            display: flex;
+
+            align-items: center;
+
+            padding: 80px 60px;
+        }
+
+
+        /* =========================================
+           HOME CONTENT
+           ========================================= */
+
+        .home-content {
+
+            max-width: 900px;
+        }
+
+
+        /* =========================================
+           SMALL INTRO TEXT
+           ========================================= */
+
+        .welcome {
+
+            font-size: 15px;
+
+            letter-spacing: 2px;
+
+            text-transform: uppercase;
+
+            color: #7d8996;
+
+            margin-bottom: 20px;
+        }
+
+
+        /* =========================================
+           MAIN TITLE
+           ========================================= */
+
+        .home h1 {
+
+            font-size: 64px;
+
+            line-height: 1.1;
+
+            color: #ffffff;
+
+            margin-bottom: 25px;
+        }
+
+
+        /* =========================================
+           DESCRIPTION
+           ========================================= */
+
+        .home-description {
+
+            max-width: 720px;
+
+            font-size: 20px;
+
+            line-height: 1.7;
+
+            color: #9da7b2;
+
+            margin-bottom: 40px;
+        }
+
+
+        /* =========================================
+           TOPIC SECTION
+           ========================================= */
+
+        .topics {
+
+            display: flex;
+
+            flex-wrap: wrap;
+
+            gap: 12px;
+        }
+
+
+        /* =========================================
+           TOPIC CARDS
+           ========================================= */
+
+        .topic {
+
+            padding: 12px 18px;
+
+            border: 1px solid #303944;
+
+            border-radius: 6px;
+
+            background-color: #11161d;
+
+            color: #c9d1d9;
+
+            font-size: 15px;
+
+            transition:
+                border-color 0.2s ease,
+                background-color 0.2s ease;
+        }
+
+
+        /* Topic hover */
+
+        .topic:hover {
+
+            border-color: #596575;
+
+            background-color: #161d26;
+        }
+
+
+        /* =========================================
+           MOBILE / TABLET
+           ========================================= */
+
+        @media (max-width: 768px) {
+
+
+            /* Header */
+
+            header {
+
+                height: auto;
+
+                padding: 25px;
+
+                flex-direction: column;
+
+                gap: 25px;
+            }
+
+
+            /* Logo */
+
+            .logo img {
+
+                height: 45px;
+            }
+
+
+            /* Navigation */
+
+            nav {
+
+                gap: 20px;
+
+                flex-wrap: wrap;
+
+                justify-content: center;
+            }
+
+
+            nav a {
+
+                font-size: 15px;
+            }
+
+
+            /* Home */
+
+            .home {
+
+                min-height: calc(100vh - 150px);
+
+                padding: 60px 25px;
+
+                align-items: flex-start;
+            }
+
+
+            /* Main heading */
+
+            .home h1 {
+
+                font-size: 44px;
+            }
+
+
+            /* Description */
+
+            .home-description {
+
+                font-size: 17px;
+            }
+
+        }
+
+
+    </style>
+
 </head>
+
 
 <body>
 
-    <h1>Welcome to My Engineering Website</h1>
 
-    <p>
-        Tutorials, Projects and Engineering Notes
-    </p>
+    <!-- =========================================
+         HEADER
+         ========================================= -->
 
-    <h2>Tutorials</h2>
+    <header>
 
-    <p>
-        Step-by-step tutorials on programming,
-        FPGA, DSP and embedded systems.
-    </p>
 
-    <h2>Projects</h2>
+        <!-- =====================================
+             LOGO
+             ===================================== -->
 
-    <p>
-        Engineering projects and experiments.
-    </p>
+        <div class="logo">
+
+            <!--
+                logo.png is in the same folder
+                as index.html
+            -->
+
+            <img
+                src="logo.png"
+                alt="Bits of Embedded Logo"
+            >
+
+        </div>
+
+
+
+        <!-- =====================================
+             NAVIGATION
+             ===================================== -->
+
+        <nav>
+
+            <!-- About -->
+            <a href="about.html">
+                About
+            </a>
+
+
+            <!-- Tutorials -->
+            <a href="tutorials.html">
+                Tutorials
+            </a>
+
+
+            <!-- Projects -->
+            <a href="projects.html">
+                Projects
+            </a>
+
+
+            <!-- Home -->
+            <a href="index.html" class="active">
+                Home
+            </a>
+
+        </nav>
+
+
+    </header>
+
+
+
+    <!-- =========================================
+         HOME PAGE
+         ========================================= -->
+
+    <main class="home">
+
+
+        <div class="home-content">
+
+
+            <!-- Small introduction -->
+
+            <div class="welcome">
+
+                ENGINEERING • LEARNING • BUILDING
+
+            </div>
+
+
+
+            <!-- Main title -->
+
+            <h1>
+
+                Bits of Embedded
+
+            </h1>
+
+
+
+            <!-- Description -->
+
+            <p class="home-description">
+
+                A collection of step-by-step tutorials,
+                engineering projects, experiments and
+                technical notes covering embedded systems,
+                FPGA, DSP, sensor fusion, C/C++ and
+                digital systems.
+
+            </p>
+
+
+
+            <!-- =====================================
+                 TOPICS
+                 ===================================== -->
+
+            <div class="topics">
+
+
+                <div class="topic">
+
+                    Embedded Systems
+
+                </div>
+
+
+                <div class="topic">
+
+                    FPGA
+
+                </div>
+
+
+                <div class="topic">
+
+                    DSP
+
+                </div>
+
+
+                <div class="topic">
+
+                    Sensor Fusion
+
+                </div>
+
+
+                <div class="topic">
+
+                    C / C++
+
+                </div>
+
+
+                <div class="topic">
+
+                    AI / ML
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+
+    </main>
+
 
 </body>
 

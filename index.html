@@ -7,9 +7,14 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Projects | Bits of Embedded</title>
+    <title>Bits of Embedded</title>
+
 
     <style>
+
+        /* =========================================
+           RESET
+           ========================================= */
 
         * {
             margin: 0;
@@ -17,133 +22,275 @@
             box-sizing: border-box;
         }
 
+
+        /* =========================================
+           BODY
+           ========================================= */
+
         body {
             font-family: Arial, Helvetica, sans-serif;
+
             background-color: #0b0f14;
+
             color: #e6edf3;
+
             min-height: 100vh;
         }
 
+
+        /* =========================================
+           HEADER
+           ========================================= */
+
         header {
             width: 100%;
+
             height: 90px;
 
             display: flex;
+
             align-items: center;
+
             justify-content: space-between;
 
             padding: 0 60px;
 
+            background-color: #0b0f14;
+
             border-bottom: 1px solid #252b33;
         }
 
+
+        /* =========================================
+           LOGO
+           ========================================= */
+
+        .logo {
+            display: flex;
+
+            align-items: center;
+        }
+
+
         .logo img {
             height: 50px;
+
             width: auto;
+
             display: block;
         }
 
+
+        /* =========================================
+           NAVIGATION
+           ========================================= */
+
         nav {
             display: flex;
+
             align-items: center;
+
             gap: 35px;
         }
 
+
         nav a {
             text-decoration: none;
+
             color: #9da7b2;
+
             font-size: 16px;
+
             font-weight: 500;
+
+            transition: color 0.2s ease;
         }
+
 
         nav a:hover {
             color: #ffffff;
         }
 
+
+        /* Active Home */
+
         nav a.active {
             color: #ffffff;
+
             font-weight: 600;
         }
 
-        .page {
+
+        /* =========================================
+           HOME SECTION
+           ========================================= */
+
+        .home {
+            min-height: calc(100vh - 90px);
+
+            display: flex;
+
+            align-items: center;
+
             padding: 80px 60px;
-            max-width: 1200px;
-            margin: auto;
         }
 
-        .page h1 {
-            font-size: 52px;
+
+        /* =========================================
+           HOME CONTENT
+           ========================================= */
+
+        .home-content {
+            max-width: 900px;
+        }
+
+
+        /* =========================================
+           SMALL INTRODUCTION
+           ========================================= */
+
+        .welcome {
+            font-size: 15px;
+
+            letter-spacing: 2px;
+
+            text-transform: uppercase;
+
+            color: #7d8996;
+
             margin-bottom: 20px;
+        }
+
+
+        /* =========================================
+           MAIN TITLE
+           ========================================= */
+
+        .home h1 {
+            font-size: 64px;
+
+            line-height: 1.1;
+
             color: #ffffff;
+
+            margin-bottom: 25px;
         }
 
-        .page-intro {
-            color: #9da7b2;
-            font-size: 19px;
+
+        /* =========================================
+           DESCRIPTION
+           ========================================= */
+
+        .home-description {
+            max-width: 720px;
+
+            font-size: 20px;
+
             line-height: 1.7;
-            max-width: 750px;
-            margin-bottom: 50px;
+
+            color: #9da7b2;
+
+            margin-bottom: 40px;
         }
 
-        .projects {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 25px;
+
+        /* =========================================
+           TOPICS
+           ========================================= */
+
+        .topics {
+            display: flex;
+
+            flex-wrap: wrap;
+
+            gap: 12px;
         }
 
-        .project {
-            padding: 30px;
 
-            background-color: #11161d;
+        /* =========================================
+           TOPIC CARDS
+           ========================================= */
+
+        .topic {
+            padding: 12px 18px;
 
             border: 1px solid #303944;
 
-            border-radius: 8px;
+            border-radius: 6px;
 
-            transition: 0.2s;
+            background-color: #11161d;
+
+            color: #c9d1d9;
+
+            font-size: 15px;
+
+            transition:
+                border-color 0.2s ease,
+                background-color 0.2s ease;
         }
 
-        .project:hover {
+
+        .topic:hover {
             border-color: #596575;
-            transform: translateY(-3px);
+
+            background-color: #161d26;
         }
 
-        .project h2 {
-            font-size: 22px;
-            margin-bottom: 15px;
-        }
 
-        .project p {
-            color: #9da7b2;
-            line-height: 1.6;
-        }
+        /* =========================================
+           MOBILE / TABLET
+           ========================================= */
 
-        @media (max-width: 800px) {
+        @media (max-width: 768px) {
 
             header {
                 height: auto;
+
                 padding: 25px;
+
                 flex-direction: column;
+
                 gap: 25px;
             }
 
+
+            .logo img {
+                height: 45px;
+            }
+
+
             nav {
                 gap: 20px;
+
                 flex-wrap: wrap;
+
                 justify-content: center;
             }
 
-            .page {
-                padding: 50px 25px;
+
+            nav a {
+                font-size: 15px;
             }
 
-            .page h1 {
-                font-size: 42px;
+
+            .home {
+                min-height: calc(100vh - 150px);
+
+                padding: 60px 25px;
+
+                align-items: flex-start;
             }
 
-            .projects {
-                grid-template-columns: 1fr;
+
+            .home h1 {
+                font-size: 44px;
             }
+
+
+            .home-description {
+                font-size: 17px;
+            }
+
         }
 
     </style>
@@ -154,147 +301,149 @@
 <body>
 
 
-<header>
+    <!-- =========================================
+         HEADER
+         ========================================= -->
 
-    <div class="logo">
-
-        <img
-            src="logo.png"
-            alt="Bits of Embedded Logo"
-        >
-
-    </div>
+    <header>
 
 
-    <nav>
+        <!-- LOGO -->
 
-        <a href="index.html">
-            Home
-        </a>
+        <div class="logo">
 
-        <a href="projects.html" class="active">
-            Projects
-        </a>
-
-        <a href="tutorials.html">
-            Tutorials
-        </a>
-
-        <a href="about.html">
-            About
-        </a>
-
-    </nav>
-
-</header>
-
-
-
-<main class="page">
-
-    <h1>
-        Projects
-    </h1>
-
-    <p class="page-intro">
-
-        Engineering projects, experiments and practical
-        implementations covering embedded systems,
-        FPGA, DSP, sensor fusion and AI/ML.
-
-    </p>
-
-
-    <section class="projects">
-
-
-        <div class="project">
-
-            <h2>
-                ZedBoard Projects
-            </h2>
-
-            <p>
-                FPGA and embedded-system projects using
-                the ZedBoard platform.
-            </p>
+            <img
+                src="logo.png"
+                alt="Bits of Embedded Logo"
+            >
 
         </div>
 
 
-        <div class="project">
+        <!-- NAVIGATION -->
 
-            <h2>
-                Sensor Fusion
-            </h2>
+        <nav>
 
-            <p>
-                Practical sensor fusion experiments
-                including Kalman filtering.
+            <!-- HOME -->
+
+            <a
+                href="index.html"
+                class="active"
+            >
+                Home
+            </a>
+
+
+            <!-- PROJECTS -->
+
+            <a href="projects.html">
+                Projects
+            </a>
+
+
+            <!-- TUTORIALS -->
+
+            <a href="tutorials.html">
+                Tutorials
+            </a>
+
+
+            <!-- ABOUT -->
+
+            <a href="about.html">
+                About
+            </a>
+
+        </nav>
+
+    </header>
+
+
+    <!-- =========================================
+         HOME PAGE
+         ========================================= -->
+
+    <main class="home">
+
+
+        <div class="home-content">
+
+
+            <!-- INTRODUCTION -->
+
+            <div class="welcome">
+
+                ENGINEERING • LEARNING • BUILDING
+
+            </div>
+
+
+            <!-- MAIN TITLE -->
+
+            <h1>
+
+                Bits of Embedded
+
+            </h1>
+
+
+            <!-- DESCRIPTION -->
+
+            <p class="home-description">
+
+                A collection of step-by-step tutorials,
+                engineering projects, experiments and
+                technical notes covering embedded systems,
+                FPGA, DSP, sensor fusion, C/C++ and
+                digital systems.
+
             </p>
+
+
+            <!-- =====================================
+                 TOPICS
+                 ===================================== -->
+
+            <div class="topics">
+
+
+                <div class="topic">
+                    Embedded Systems
+                </div>
+
+
+                <div class="topic">
+                    FPGA
+                </div>
+
+
+                <div class="topic">
+                    DSP
+                </div>
+
+
+                <div class="topic">
+                    Sensor Fusion
+                </div>
+
+
+                <div class="topic">
+                    C / C++
+                </div>
+
+
+                <div class="topic">
+                    AI / ML
+                </div>
+
+
+            </div>
+
 
         </div>
 
 
-        <div class="project">
-
-            <h2>
-                DSP Projects
-            </h2>
-
-            <p>
-                Digital signal processing experiments
-                and implementations.
-            </p>
-
-        </div>
-
-
-        <div class="project">
-
-            <h2>
-                Camera + FPGA
-            </h2>
-
-            <p>
-                Camera interfaces and real-time image
-                processing using FPGA.
-            </p>
-
-        </div>
-
-
-        <div class="project">
-
-            <h2>
-                AI / ML
-            </h2>
-
-            <p>
-                Embedded AI and machine-learning
-                experiments.
-            </p>
-
-        </div>
-
-
-        <div class="project">
-
-            <h2>
-                Embedded Systems
-            </h2>
-
-            <p>
-                Embedded software, hardware and
-                system-level experiments.
-            </p>
-
-        </div>
-
-
-    </section>
-
-</main>
+    </main>
 
 
 </body>

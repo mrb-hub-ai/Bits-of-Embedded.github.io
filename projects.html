@@ -1,152 +1,22 @@
 <!DOCTYPE html>
+
 <html lang="en">
 
 <head>
 
     <meta charset="UTF-8">
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
 
     <title>Projects | Bits of Embedded</title>
 
-    <style>
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: Arial, Helvetica, sans-serif;
-            background-color: #0b0f14;
-            color: #e6edf3;
-            min-height: 100vh;
-        }
-
-        header {
-            width: 100%;
-            height: 90px;
-
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-
-            padding: 0 60px;
-
-            border-bottom: 1px solid #252b33;
-        }
-
-        .logo img {
-            height: 50px;
-            width: auto;
-            display: block;
-        }
-
-        nav {
-            display: flex;
-            align-items: center;
-            gap: 35px;
-        }
-
-        nav a {
-            text-decoration: none;
-            color: #9da7b2;
-            font-size: 16px;
-            font-weight: 500;
-        }
-
-        nav a:hover {
-            color: #ffffff;
-        }
-
-        nav a.active {
-            color: #ffffff;
-            font-weight: 600;
-        }
-
-        .page {
-            padding: 80px 60px;
-            max-width: 1200px;
-            margin: auto;
-        }
-
-        .page h1 {
-            font-size: 52px;
-            margin-bottom: 20px;
-            color: #ffffff;
-        }
-
-        .page-intro {
-            color: #9da7b2;
-            font-size: 19px;
-            line-height: 1.7;
-            max-width: 750px;
-            margin-bottom: 50px;
-        }
-
-        .projects {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 25px;
-        }
-
-        .project {
-            padding: 30px;
-
-            background-color: #11161d;
-
-            border: 1px solid #303944;
-
-            border-radius: 8px;
-
-            transition: 0.2s;
-        }
-
-        .project:hover {
-            border-color: #596575;
-            transform: translateY(-3px);
-        }
-
-        .project h2 {
-            font-size: 22px;
-            margin-bottom: 15px;
-        }
-
-        .project p {
-            color: #9da7b2;
-            line-height: 1.6;
-        }
-
-        @media (max-width: 800px) {
-
-            header {
-                height: auto;
-                padding: 25px;
-                flex-direction: column;
-                gap: 25px;
-            }
-
-            nav {
-                gap: 20px;
-                flex-wrap: wrap;
-                justify-content: center;
-            }
-
-            .page {
-                padding: 50px 25px;
-            }
-
-            .page h1 {
-                font-size: 42px;
-            }
-
-            .projects {
-                grid-template-columns: 1fr;
-            }
-        }
-
-    </style>
+    <link
+        rel="stylesheet"
+        href="css/style.css"
+    >
 
 </head>
 
@@ -156,146 +26,250 @@
 
 <header>
 
-    <div class="logo">
+    <div class="container header-inner">
 
-        <img
-            src="logo.png"
-            alt="Bits of Embedded Logo"
+
+        <a
+            href="index.html"
+            class="logo"
         >
 
+            <img
+                src="logo.png"
+                alt="Bits of Embedded"
+            >
+
+            <span class="logo-text">
+                Bits of Embedded
+            </span>
+
+        </a>
+
+
+        <nav>
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a
+                href="projects.html"
+                class="active"
+            >
+                Projects
+            </a>
+
+            <a href="tutorials.html">
+                Tutorials
+            </a>
+
+            <a href="about.html">
+                About
+            </a>
+
+        </nav>
+
     </div>
-
-
-    <nav>
-
-        <a href="index.html">
-            Home
-        </a>
-
-        <a href="projects.html" class="active">
-            Projects
-        </a>
-
-        <a href="tutorials.html">
-            Tutorials
-        </a>
-
-        <a href="about.html">
-            About
-        </a>
-
-    </nav>
 
 </header>
 
 
 
-<main class="page">
-
-    <h1>
-        Projects
-    </h1>
-
-    <p class="page-intro">
-
-        Engineering projects, experiments and practical
-        implementations covering embedded systems,
-        FPGA, DSP, sensor fusion and AI/ML.
-
-    </p>
+<main>
 
 
-    <section class="projects">
+<section class="page-hero">
+
+    <div class="container">
+
+        <div class="section-label">
+            Engineering
+        </div>
+
+        <h1>
+            Projects
+        </h1>
+
+        <p>
+            Hands-on engineering projects,
+            experiments and practical implementations
+            across embedded systems, FPGA, DSP,
+            sensor fusion and AI.
+        </p>
+
+    </div>
+
+</section>
 
 
-        <div class="project">
 
-            <h2>
-                ZedBoard Projects
-            </h2>
+<section class="section">
 
-            <p>
-                FPGA and embedded-system projects using
-                the ZedBoard platform.
-            </p>
+    <div class="container">
+
+
+        <div class="card-grid">
+
+
+            <article class="card">
+
+                <div class="card-category">
+                    FPGA / DSP
+                </div>
+
+                <h3>
+                    ZedBoard Sensor Fusion
+                </h3>
+
+                <div class="tags">
+
+                    <span class="tag">
+                        ZedBoard
+                    </span>
+
+                    <span class="tag">
+                        FPGA
+                    </span>
+
+                    <span class="tag">
+                        Kalman
+                    </span>
+
+                </div>
+
+                <p>
+                    Sensor acquisition, filtering
+                    and Kalman-based sensor fusion.
+                </p>
+
+                <a
+                    href="projects/zedboard-sensor-fusion.html"
+                    class="card-link"
+                >
+                    View Project →
+                </a>
+
+            </article>
+
+
+
+            <article class="card">
+
+                <div class="card-category">
+                    FPGA / IMAGE
+                </div>
+
+                <h3>
+                    FPGA Camera Pipeline
+                </h3>
+
+                <div class="tags">
+
+                    <span class="tag">
+                        FPGA
+                    </span>
+
+                    <span class="tag">
+                        Camera
+                    </span>
+
+                    <span class="tag">
+                        DSP
+                    </span>
+
+                </div>
+
+                <p>
+                    Camera data acquisition and
+                    real-time image processing.
+                </p>
+
+                <a
+                    href="projects/fpga-camera.html"
+                    class="card-link"
+                >
+                    View Project →
+                </a>
+
+            </article>
+
+
+
+            <article class="card">
+
+                <div class="card-category">
+                    AI / FPGA
+                </div>
+
+                <h3>
+                    AI Inference on ZedBoard
+                </h3>
+
+                <div class="tags">
+
+                    <span class="tag">
+                        AI
+                    </span>
+
+                    <span class="tag">
+                        ML
+                    </span>
+
+                    <span class="tag">
+                        FPGA
+                    </span>
+
+                </div>
+
+                <p>
+                    Explore AI inference and
+                    hardware acceleration on
+                    embedded platforms.
+                </p>
+
+                <a
+                    href="projects/ai-inference.html"
+                    class="card-link"
+                >
+                    View Project →
+                </a>
+
+            </article>
+
 
         </div>
 
+    </div>
 
-        <div class="project">
+</section>
 
-            <h2>
-                Sensor Fusion
-            </h2>
-
-            <p>
-                Practical sensor fusion experiments
-                including Kalman filtering.
-            </p>
-
-        </div>
-
-
-        <div class="project">
-
-            <h2>
-                DSP Projects
-            </h2>
-
-            <p>
-                Digital signal processing experiments
-                and implementations.
-            </p>
-
-        </div>
-
-
-        <div class="project">
-
-            <h2>
-                Camera + FPGA
-            </h2>
-
-            <p>
-                Camera interfaces and real-time image
-                processing using FPGA.
-            </p>
-
-        </div>
-
-
-        <div class="project">
-
-            <h2>
-                AI / ML
-            </h2>
-
-            <p>
-                Embedded AI and machine-learning
-                experiments.
-            </p>
-
-        </div>
-
-
-        <div class="project">
-
-            <h2>
-                Embedded Systems
-            </h2>
-
-            <p>
-                Embedded software, hardware and
-                system-level experiments.
-            </p>
-
-        </div>
-
-
-    </section>
 
 </main>
 
+
+
+<footer>
+
+    <div class="container footer-inner">
+
+        <div class="footer-text">
+
+            ©
+            <span id="current-year"></span>
+            Bits of Embedded
+
+        </div>
+
+        <div class="footer-text">
+            Engineering • Learning • Building
+        </div>
+
+    </div>
+
+</footer>
+
+
+<script src="js/main.js"></script>
 
 </body>
 

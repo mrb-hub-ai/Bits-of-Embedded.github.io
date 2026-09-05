@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Tutorials | Bits of Embedded</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #0b0f14;
+            color: #e6edf3;
+            min-height: 100vh;
+        }
+
+        header {
+            width: 100%;
+            height: 90px;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            padding: 0 60px;
+
+            border-bottom: 1px solid #252b33;
+        }
+
+        .logo img {
+            height: 50px;
+            width: auto;
+            display: block;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+            gap: 35px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #9da7b2;
+            font-size: 16px;
+            font-weight: 500;
+        }
+
+        nav a:hover {
+            color: #ffffff;
+        }
+
+        nav a.active {
+            color: #ffffff;
+            font-weight: 600;
+        }
+
+        .page {
+            padding: 80px 60px;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .page h1 {
+            font-size: 52px;
+            margin-bottom: 20px;
+        }
+
+        .page-intro {
+            color: #9da7b2;
+            font-size: 19px;
+            line-height: 1.7;
+            max-width: 750px;
+            margin-bottom: 50px;
+        }
+
+        .tutorials {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .tutorial {
+            padding: 30px;
+
+            background-color: #11161d;
+
+            border: 1px solid #303944;
+
+            border-radius: 8px;
+
+            transition: 0.2s;
+        }
+
+        .tutorial:hover {
+            border-color: #596575;
+            transform: translateY(-3px);
+        }
+
+        .tutorial h2 {
+            font-size: 22px;
+            margin-bottom: 15px;
+        }
+
+        .tutorial p {
+            color: #9da7b2;
+            line-height: 1.6;
+        }
+
+        @media (max-width: 800px) {
+
+            header {
+                height: auto;
+                padding: 25px;
+                flex-direction: column;
+                gap: 25px;
+            }
+
+            nav {
+                gap: 20px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .page {
+                padding: 50px 25px;
+            }
+
+            .page h1 {
+                font-size: 42px;
+            }
+
+            .tutorials {
+                grid-template-columns: 1fr;
+            }
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<header>
+
+    <div class="logo">
+
+        <img
+            src="logo.png"
+            alt="Bits of Embedded Logo"
+        >
+
+    </div>
+
+
+    <nav>
+
+        <a href="index.html">
+            Home
+        </a>
+
+        <a href="projects.html">
+            Projects
+        </a>
+
+        <a href="tutorials.html" class="active">
+            Tutorials
+        </a>
+
+        <a href="about.html">
+            About
+        </a>
+
+    </nav>
+
+</header>
+
+
+
+<main class="page">
+
+    <h1>
+        Tutorials
+    </h1>
+
+    <p class="page-intro">
+
+        Step-by-step technical tutorials designed to
+        explain concepts from fundamentals to practical
+        implementation.
+
+    </p>
+
+
+    <section class="tutorials">
+
+
+        <div class="tutorial">
+
+            <h2>
+                C / C++
+            </h2>
+
+            <p>
+                Programming fundamentals, memory,
+                pointers, data structures and
+                embedded C/C++.
+            </p>
+
+        </div>
+
+
+        <div class="tutorial">
+
+            <h2>
+                FPGA
+            </h2>
+
+            <p>
+                FPGA fundamentals, RTL design,
+                interfaces and hardware acceleration.
+            </p>
+
+        </div>
+
+
+        <div class="tutorial">
+
+            <h2>
+                DSP
+            </h2>
+
+            <p>
+                Signals, sampling, FFT, FIR, IIR
+                and practical DSP implementation.
+            </p>
+
+        </div>
+
+
+        <div class="tutorial">
+
+            <h2>
+                Sensor Fusion
+            </h2>
+
+            <p>
+                Sensor models, noise, estimation and
+                Kalman filter fundamentals.
+            </p>
+
+        </div>
+
+
+        <div class="tutorial">
+
+            <h2>
+                Embedded Systems
+            </h2>
+
+            <p>
+                Microprocessors, peripherals,
+                communication interfaces and
+                embedded software.
+            </p>
+
+        </div>
+
+
+        <div class="tutorial">
+
+            <h2>
+                AI / ML
+            </h2>
+
+            <p>
+                Machine learning and AI concepts
+                for embedded platforms.
+            </p>
+
+        </div>
+
+
+    </section>
+
+</main>
+
+
+</body>
+
+</html>
